@@ -1,0 +1,6 @@
+framework module Pods_DownToEatUITests {
+  umbrella header "Pods-DownToEatUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

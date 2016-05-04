@@ -1,2 +1,2 @@
-# GrabABite
-iOS app GrabABite
+# CS378
+iOS Development
