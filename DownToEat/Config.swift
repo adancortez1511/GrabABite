@@ -17,7 +17,7 @@ class Config
 {
 	static let sharedInstance = Config()
 
-	private var _fireBase = Firebase(url: "https://grab-a-bite.firebaseio.com/")
+	//private var _fireBase = Firebase(url: "https://grab-a-bite.firebaseio.com/")
 	private var _themeColor: UIColor = UIColor(red: 236.0/255, green: 80.0/255, blue: 53.0/255, alpha: 1.0)
 	private var _themeFont: UIFont = UIFont(name: "Avenir-Black", size: 28.0)!
 	private var _buttonFont: UIFont = UIFont(name: "Avenir-Black", size: 24.0)!
@@ -31,8 +31,8 @@ class Config
 	private var _widthOfDevice: CGFloat = 0.0
 	private var _height: CGFloat = 0.0
 	private var _heightOfDevice: CGFloat = 0.0
-	private var _profilePhotoImg: UIImageView!
-	private var _userName: String = ""
+//	private var _profilePhotoImg: UIImageView!
+//	private var _userName: String = ""
 	private var _eventsAttending: Int = 0
 	private var _navigationBarCreate: UINavigationBar!
 	private var _eventDictionary: Dictionary<Int, UIImageView>! = Dictionary()
@@ -126,23 +126,23 @@ class Config
 		set (newValue) {_fontName = newValue}
 	}
 	
-	var profilePhotoImg: UIImageView
-	{
-		get {return _profilePhotoImg}
-		set (newValue) {_profilePhotoImg = newValue}
-	}
+//	var profilePhotoImg: UIImageView
+//	{
+//		get {return _profilePhotoImg}
+//		set (newValue) {_profilePhotoImg = newValue}
+//	}
 	
-	var userName: String
-	{
-		get {return _userName}
-		set (newValue) {_userName = newValue}
-	}
+//	var userName: String
+//	{
+//		get {return _userName}
+//		set (newValue) {_userName = newValue}
+//	}
 	
-	var fireBase: Firebase
-	{
-		get {return _fireBase}
-		set (newValue) {_fireBase = newValue}
-	}
+//	var fireBase: Firebase
+//	{
+//		get {return _fireBase}
+//		set (newValue) {_fireBase = newValue}
+//	}
 
 	var navigationBarCreate: UINavigationBar
 	{

@@ -30,6 +30,11 @@
 		135AA4041CB46AB7007752CF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135AA4031CB46AB7007752CF /* MapViewController.swift */; };
 		135AA40A1CB48512007752CF /* grababite_LOADING_ICON.png in Resources */ = {isa = PBXBuildFile; fileRef = 135AA4091CB48512007752CF /* grababite_LOADING_ICON.png */; };
 		139E228B1CD8DB090028CE2B /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139E228A1CD8DB090028CE2B /* BusinessViewController.swift */; };
+		13B457951CDC784100B771E2 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B457941CDC784100B771E2 /* FeedTableViewController.swift */; };
+		13B457971CDC790300B771E2 /* MessageCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B457961CDC790300B771E2 /* MessageCellTableViewController.swift */; };
+		13B457991CDC791900B771E2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B457981CDC791900B771E2 /* MessageCell.swift */; };
+		13B4579B1CDC7A0E00B771E2 /* MessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4579A1CDC7A0E00B771E2 /* MessageInfo.swift */; };
+		13B4579F1CDC8C0400B771E2 /* CreateMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B4579E1CDC8C0400B771E2 /* CreateMessageViewController.swift */; };
 		4A6FFF596BB4469049C20A42 /* Pods_DownToEatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23DE65282E2FA77B87BEE78A /* Pods_DownToEatUITests.framework */; };
 		C56453D529C349CC60AA2155 /* Pods_DownToEatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74F4DC2197B3E58AEAD0FED /* Pods_DownToEatTests.framework */; };
 		E60BD43C1C9FE096007479F0 /* POPAnimatableProperty.mm in Sources */ = {isa = PBXBuildFile; fileRef = E60BD4101C9FE096007479F0 /* POPAnimatableProperty.mm */; };
@@ -137,6 +142,11 @@
 		135AA4031CB46AB7007752CF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = DownToEat/MapViewController.swift; sourceTree = "<group>"; };
 		135AA4091CB48512007752CF /* grababite_LOADING_ICON.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = grababite_LOADING_ICON.png; path = image_set_NEW/grababite_LOADING_ICON.png; sourceTree = SOURCE_ROOT; };
 		139E228A1CD8DB090028CE2B /* BusinessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
+		13B457941CDC784100B771E2 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		13B457961CDC790300B771E2 /* MessageCellTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCellTableViewController.swift; sourceTree = "<group>"; };
+		13B457981CDC791900B771E2 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		13B4579A1CDC7A0E00B771E2 /* MessageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInfo.swift; sourceTree = "<group>"; };
+		13B4579E1CDC8C0400B771E2 /* CreateMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateMessageViewController.swift; sourceTree = "<group>"; };
 		23DE65282E2FA77B87BEE78A /* Pods_DownToEatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DownToEatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33868A4411E44A5082D55914 /* Pods-DownToEatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DownToEatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DownToEatUITests/Pods-DownToEatUITests.release.xcconfig"; sourceTree = "<group>"; };
 		342AB42CE53A5EB1E6F216F1 /* Pods_DownToEat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DownToEat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,7 +321,6 @@
 				1327A52F1CCCDB3700649AD2 /* FilterViewController.swift */,
 				139E228A1CD8DB090028CE2B /* BusinessViewController.swift */,
 				1327A5311CCCDB7200649AD2 /* DetailViewController.swift */,
-				133DD66D1CDA816800EAF9D6 /* CreateEventViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -319,9 +328,31 @@
 		133DD66A1CDA71A100EAF9D6 /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
-				133DD66B1CDA74F200EAF9D6 /* MessengerViewController.swift */,
+				13B457981CDC791900B771E2 /* MessageCell.swift */,
+				13B4579A1CDC7A0E00B771E2 /* MessageInfo.swift */,
+				13B457911CDC776B00B771E2 /* View Controllers */,
 			);
 			name = Messenger;
+			sourceTree = "<group>";
+		};
+		13B457911CDC776B00B771E2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				133DD66B1CDA74F200EAF9D6 /* MessengerViewController.swift */,
+				13B4579E1CDC8C0400B771E2 /* CreateMessageViewController.swift */,
+				13B457941CDC784100B771E2 /* FeedTableViewController.swift */,
+				13B457961CDC790300B771E2 /* MessageCellTableViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		13B4579C1CDC8AE200B771E2 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				133DD66D1CDA816800EAF9D6 /* CreateEventViewController.swift */,
+			);
+			name = Events;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1AA35ACD2714AA0CD2827B16 /* Pods */ = {
@@ -454,13 +485,13 @@
 			name = Messages;
 			sourceTree = "<group>";
 		};
-		E62D30941CA716ED00616D7A /* Calendar */ = {
+		E62D30941CA716ED00616D7A /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
 				E631B9DC1CAF2C170046912C /* ScheduleTableViewController.swift */,
 				E6769D5C1CD5DC3900003F20 /* ScheduleViewController.swift */,
 			);
-			name = Calendar;
+			name = Schedule;
 			sourceTree = "<group>";
 		};
 		E6C071541C74305800DACD15 = {
@@ -498,11 +529,12 @@
 				E62D308C1CA643D500616D7A /* SettingsFunctionality */,
 				E62D30891CA6430200616D7A /* FacebookFunctionality */,
 				E62D30881CA642C800616D7A /* SwipeFunctionality */,
-				E6C071921C74354300DACD15 /* AppImageSet */,
 				E6FF9B591CB71E7F0051F95F /* Backend */,
-				E62D30941CA716ED00616D7A /* Calendar */,
+				E62D30941CA716ED00616D7A /* Schedule */,
 				1327A51E1CCC916100649AD2 /* Restaurants */,
+				13B4579C1CDC8AE200B771E2 /* Events */,
 				E62D30931CA716E700616D7A /* Messages */,
+				E6C071921C74354300DACD15 /* AppImageSet */,
 				E6C071911C74353800DACD15 /* Framework */,
 				E60BD40C1C9FE06F007479F0 /* Pop */,
 				E6C0719A1C7435AA00DACD15 /* SupportingFiles */,
@@ -658,7 +690,6 @@
 				TargetAttributes = {
 					E6C0715C1C74305900DACD15 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 85EJYNNB4S;
 					};
 					E6C071731C74305900DACD15 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -871,6 +902,7 @@
 				E65993441C9FE10F00A0CD02 /* BackgroundAnimationViewController.swift in Sources */,
 				E60BD43D1C9FE096007479F0 /* POPAnimation.mm in Sources */,
 				E60BD4411C9FE096007479F0 /* POPAnimationTracer.mm in Sources */,
+				13B457951CDC784100B771E2 /* FeedTableViewController.swift in Sources */,
 				E65708421CC9BAD20075463A /* Friend.swift in Sources */,
 				E6C071611C74305900DACD15 /* AppDelegate.swift in Sources */,
 				1327A5291CCC972300649AD2 /* BussinessCell.swift in Sources */,
@@ -879,6 +911,7 @@
 				E60BD4471C9FE096007479F0 /* POPGeometry.mm in Sources */,
 				139E228B1CD8DB090028CE2B /* BusinessViewController.swift in Sources */,
 				E659933F1C9FE0DE00A0CD02 /* OverlayView.swift in Sources */,
+				13B457971CDC790300B771E2 /* MessageCellTableViewController.swift in Sources */,
 				E60BD4511C9FE0AE007479F0 /* TransformationMatrix.cpp in Sources */,
 				1327A5251CCC94A100649AD2 /* YelpClient.swift in Sources */,
 				E65993451C9FE10F00A0CD02 /* ExampleOverlayView.swift in Sources */,
@@ -893,13 +926,16 @@
 				E60BD4421C9FE096007479F0 /* POPAnimator.mm in Sources */,
 				E699F68B1CA4F2EC002021BB /* DownToEatTabBarController.swift in Sources */,
 				E657083F1CC9BAD20075463A /* ChatTableViewController.swift in Sources */,
+				13B4579F1CDC8C0400B771E2 /* CreateMessageViewController.swift in Sources */,
 				E60BD4461C9FE096007479F0 /* POPDecayAnimation.mm in Sources */,
 				1327A5211CCC945600649AD2 /* Business.swift in Sources */,
 				E60BD44B1C9FE096007479F0 /* POPSpringAnimation.mm in Sources */,
 				E60BD44A1C9FE096007479F0 /* POPPropertyAnimation.mm in Sources */,
 				E60BD4431C9FE096007479F0 /* POPBasicAnimation.mm in Sources */,
+				13B4579B1CDC7A0E00B771E2 /* MessageInfo.swift in Sources */,
 				E60BD4481C9FE096007479F0 /* POPLayerExtras.mm in Sources */,
 				E6CF91BF1CC32BB600EDFE4F /* FirebaseDataBase.swift in Sources */,
+				13B457991CDC791900B771E2 /* MessageCell.swift in Sources */,
 				133DD66E1CDA816800EAF9D6 /* CreateEventViewController.swift in Sources */,
 				E62D30901CA643F800616D7A /* LegalViewController.swift in Sources */,
 				E6C071691C74305900DACD15 /* DownToEat.xcdatamodeld in Sources */,

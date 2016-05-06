@@ -68,6 +68,7 @@ class FacebookLogoutViewController: UIViewController, FBSDKLoginButtonDelegate
 		
 		// Create two buttons for the navigation item
 		navigationItem.leftBarButtonItem = leftButton
+        
 		
 		self.navigationItem.leftBarButtonItem?.setTitleTextAttributes( [ NSFontAttributeName: config.navigationBarItemFont, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: UIControlState.Normal)
 		self.navigationItem.rightBarButtonItem?.setTitleTextAttributes( [ NSFontAttributeName: config.navigationBarItemFont, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: UIControlState.Normal)

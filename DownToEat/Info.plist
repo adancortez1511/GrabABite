@@ -34,7 +34,7 @@
 	<key>FacebookAppID</key>
 	<string>181315458904075</string>
 	<key>FacebookDisplayName</key>
-	<string>DownToEat</string>
+	<string>GrabABite</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController
 		self.view.addSubview(config.createNavigationBar("Settings", createLeftBtn: true, leftBarBtn: leftButton, createRightBtn: false, rightBarBtn: rightButton))
 		
 		self.createLabels()
-		self.retreiveImagesFromFacebook()
+//		self.retreiveImagesFromFacebook()
 		self.view.backgroundColor = config.themeColor
 		// Do any additional setup after loading the view, typically from a nib.
 	}
@@ -64,28 +64,28 @@ class SettingsViewController: UIViewController
 		self.view.addSubview(feedBack)
 	}
 	
-	func retreiveImagesFromFacebook()
-	{
-		let profilePicture = config.profilePhotoImg
-		profilePicture.backgroundColor = UIColor.whiteColor()
-		profilePicture.layer.borderColor = UIColor.whiteColor().CGColor
-		profilePicture.layer.cornerRadius = 100
-		profilePicture.layer.borderWidth = 3
-		profilePicture.clipsToBounds = true
-
-		let userNameLabel = UILabel(frame: CGRectMake(self.view.frame.size.width/2 - 100, 250, 200, 50))
-		userNameLabel.textAlignment = NSTextAlignment.Center
-		userNameLabel.text = config.userName
-		userNameLabel.font = config.largeTextFont
-		userNameLabel.textColor = config.themeColor
-		
-		let verticalBar = UIView(frame: CGRectMake(0, 65, self.view.frame.size.width, 300))
-		verticalBar.backgroundColor = UIColor.whiteColor()
-
-		verticalBar.addSubview(profilePicture)
-		verticalBar.addSubview(userNameLabel)
-		self.view.addSubview(verticalBar)
-	}
+//	func retreiveImagesFromFacebook()
+//	{
+//		let profilePicture = config.profilePhotoImg
+//		profilePicture.backgroundColor = UIColor.whiteColor()
+//		profilePicture.layer.borderColor = UIColor.whiteColor().CGColor
+//		profilePicture.layer.cornerRadius = 100
+//		profilePicture.layer.borderWidth = 3
+//		profilePicture.clipsToBounds = true
+//
+//		let userNameLabel = UILabel(frame: CGRectMake(self.view.frame.size.width/2 - 100, 250, 200, 50))
+//		userNameLabel.textAlignment = NSTextAlignment.Center
+//		userNameLabel.text = config.userName
+//		userNameLabel.font = config.largeTextFont
+//		userNameLabel.textColor = config.themeColor
+//		
+//		let verticalBar = UIView(frame: CGRectMake(0, 65, self.view.frame.size.width, 300))
+//		verticalBar.backgroundColor = UIColor.whiteColor()
+//
+//		verticalBar.addSubview(profilePicture)
+//		verticalBar.addSubview(userNameLabel)
+//		self.view.addSubview(verticalBar)
+//	}
 	
 	func btn_clicked(sender: UIBarButtonItem) {
 	// Do something

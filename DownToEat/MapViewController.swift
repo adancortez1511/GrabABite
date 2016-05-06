@@ -25,8 +25,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //tab bar
-		//self.title = "Restaurants"
+        //navigation bar
 		self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: config.themeFont, NSForegroundColorAttributeName: UIColor.whiteColor()]
 		self.navigationController?.navigationBar.backgroundColor = config.themeColor
 		

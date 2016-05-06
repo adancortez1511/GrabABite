@@ -23,7 +23,7 @@
 //        
 //        self.navigationItem.leftBarButtonItem?.setTitleTextAttributes( [ NSFontAttributeName: config.navigationBarItemFont, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: UIControlState.Normal)
 //        self.navigationItem.rightBarButtonItem?.setTitleTextAttributes( [ NSFontAttributeName: config.navigationBarItemFont, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: UIControlState.Normal)
-//        
+//
 //    }
 //    
 //    override func viewDidAppear(animated: Bool) {
@@ -41,7 +41,7 @@
 //        tabBarItem = UITabBarItem(title: "Messenger", image: UIImage(named: "chat_orange"), tag: 1)
 //        tabBarItem.setTitleTextAttributes([ NSFontAttributeName: config.smallTextFont, NSForegroundColorAttributeName: UIColor.whiteColor()], forState: .Normal)
 //    }
-//	
+//
 //	func edit_btn_clicked(sender: UIBarButtonItem)
 //	{
 //		tableView.editing = !tableView.editing
