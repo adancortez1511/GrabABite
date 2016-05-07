@@ -44,8 +44,6 @@ class DetailViewController: UIViewController {
         getDirections.layer.cornerRadius = 10
         
         self.navigationController?.navigationItem.leftBarButtonItem?.title = "Back"
-        
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,9 +53,10 @@ class DetailViewController: UIViewController {
     
     //back button
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        navigationItem.title = "Back"
+		let createEventViewControllerDestination = segue.destinationViewController as! CreateEventViewController
+		createEventViewControllerDestination.business = business
     }
-    
+	
     @IBAction func getDirectionsToRestaurant(sender: AnyObject) {
     
     }

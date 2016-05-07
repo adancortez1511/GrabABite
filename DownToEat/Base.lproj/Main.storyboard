@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vBK-K8-eJq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vBK-K8-eJq">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -241,11 +241,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <inset key="scrollIndicatorInsets" minX="0.0" minY="200" maxX="0.0" maxY="0.0"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="scheduleCellID" selectionStyle="default" indentationWidth="10" reuseIdentifier="scheduleCell" id="EtX-Af-xIi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="scheduleCellID" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="scheduleCell" id="EtX-Af-xIi">
                                 <rect key="frame" x="0.0" y="92" width="600" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="scheduleCell" tableViewCell="EtX-Af-xIi" id="lAn-1X-6Ef">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8L-aJ-pOJ">
@@ -587,7 +587,7 @@
         <!--Create Event View Controller-->
         <scene sceneID="Zc2-Ht-kcV">
             <objects>
-                <viewController id="kEX-sz-a5i" customClass="CreateEventViewController" customModule="DownToEat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateEventViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kEX-sz-a5i" customClass="CreateEventViewController" customModule="DownToEat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="omN-NT-OIM"/>
                         <viewControllerLayoutGuide type="bottom" id="A0A-GT-leX"/>
@@ -595,10 +595,94 @@
                     <view key="view" contentMode="scaleToFill" id="fuv-fe-zob">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx3-vm-ee4">
+                                <rect key="frame" x="33" y="237" width="351" height="49"/>
+                                <accessibility key="accessibilityConfiguration" label="Restaurant Name"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="zd8-ov-fey"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.92549019610000005" green="0.31372549020000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Pq-RI-Oo2">
+                                <rect key="frame" x="31" y="286" width="346" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ve8-Ye-dzJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOc-cr-Cl0">
+                                <rect key="frame" x="54" y="341" width="304" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RbR-GB-JbF"/>
+                                    <constraint firstAttribute="width" constant="304" id="aSj-us-KaM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAl-RV-5f1">
+                                <rect key="frame" x="54" y="315" width="304" height="21"/>
+                                <accessibility key="accessibilityConfiguration" label="Distance"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RBv-RR-osw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4zC-M3-Vrl">
+                                <rect key="frame" x="131" y="79" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EkK-4w-wiP"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnX-Ul-Hxy">
+                                <rect key="frame" x="138" y="609" width="145" height="35"/>
+                                <color key="backgroundColor" red="0.9456922163" green="0.3176467845" blue="0.21203525849999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="145" id="Vdv-0K-ebu"/>
+                                    <constraint firstAttribute="height" constant="35" id="fet-wa-7Yq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Let's Eat!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNewEvent:" destination="kEX-sz-a5i" eventType="touchUpInside" id="av5-1g-sFO"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ndA-H9-9kv">
+                                <rect key="frame" x="31" y="379" width="353" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="484269944.40760899">
+                                    <!--2016-05-06 23:25:44 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xx3-vm-ee4" firstAttribute="centerX" secondItem="eOc-cr-Cl0" secondAttribute="centerX" constant="2.5" id="4zO-w1-8ij"/>
+                            <constraint firstItem="Xx3-vm-ee4" firstAttribute="top" secondItem="4zC-M3-Vrl" secondAttribute="bottom" constant="8" symbolic="YES" id="C74-yQ-O7F"/>
+                            <constraint firstItem="eOc-cr-Cl0" firstAttribute="top" secondItem="cAl-RV-5f1" secondAttribute="bottom" constant="5" id="RRG-7Z-wKy"/>
+                            <constraint firstItem="8Pq-RI-Oo2" firstAttribute="top" secondItem="Xx3-vm-ee4" secondAttribute="bottom" id="f3l-us-Tj0"/>
+                            <constraint firstItem="4zC-M3-Vrl" firstAttribute="centerX" secondItem="cAl-RV-5f1" secondAttribute="centerX" id="s35-H7-G23"/>
+                            <constraint firstItem="cAl-RV-5f1" firstAttribute="top" secondItem="8Pq-RI-Oo2" secondAttribute="bottom" constant="8" id="vfq-GT-iCK"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="stt-jg-4Ot"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="8Pq-RI-Oo2" id="L1n-nc-JUS"/>
+                        <outlet property="categoriesLabel" destination="eOc-cr-Cl0" id="k7c-ai-1VS"/>
+                        <outlet property="createEvent" destination="TnX-Ul-Hxy" id="iqb-SV-xzk"/>
+                        <outlet property="nameLabel" destination="Xx3-vm-ee4" id="ydl-vQ-7Xa"/>
+                        <outlet property="phoneLabel" destination="cAl-RV-5f1" id="61m-A3-d5m"/>
+                        <outlet property="restaurantImageView" destination="4zC-M3-Vrl" id="QB8-4G-k8z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0G-vj-En1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

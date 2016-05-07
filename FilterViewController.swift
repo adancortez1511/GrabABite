@@ -277,7 +277,6 @@ extension FilterViewController: UITableViewDataSource, UITableViewDelegate, Filt
             }
             flagsDistance[indexPath.row] = value
             distance = distanceChose[indexPath.row]
-            print(distance)
         case 2:
             flagsSort[indexPath.row] = value
         case 3:

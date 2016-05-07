@@ -44,10 +44,10 @@ class BusinessesViewController: UIViewController, FilterViewControllerDelegate, 
             self.businesses = businesses
             self.filteredData = businesses
             self.tableView.reloadData()
-            for business in businesses {
-                print(business.name!)
-                print(business.address!)
-            }
+//            for business in businesses {
+//                print(business.name!)
+//                print(business.address!)
+//            }
         })
         
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: config.themeFont, NSForegroundColorAttributeName: UIColor.whiteColor()]
@@ -131,7 +131,6 @@ extension BusinessesViewController:  UITableViewDelegate {
         let selectedBusiness = filteredData![indexPath!.row]
         let detailViewControllerDestination = segue.destinationViewController as! DetailViewController
         detailViewControllerDestination.business = selectedBusiness
-        print("Seque to Detail View")
     }
 }
 

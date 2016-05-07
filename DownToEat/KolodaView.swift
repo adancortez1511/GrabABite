@@ -160,11 +160,13 @@ public class KolodaView: UIView, DraggableCardDelegate {
         if let dataSource = dataSource {
             countOfCards = Int(dataSource.koloda(kolodaNumberOfCards: self))
 			
+			print("hello")
             if countOfCards - currentCardNumber > 0 {
                 
                 let countOfNeededCards = min(countOfVisibleCards, countOfCards - currentCardNumber)
                 
                 for index in 0..<countOfNeededCards {
+					print("hello \(index)")
                     let nextCardContentView = dataSource.koloda(self, viewForCardAtIndex: UInt(index+currentCardNumber))
                     let nextCardView = DraggableCardView(frame: frameForTopCard())
                     
@@ -224,7 +226,7 @@ public class KolodaView: UIView, DraggableCardDelegate {
         return frameForCardAtIndex(0)
     }
     
-    private func backgroundCardParametersForFrame(initialFrame: CGRect) -> (frame: CGRect, scale: CGSize) {
+    private func backgroundCardParametersForFrame(initialFrame: CGRect) -> (frame: CGRect, scale: CGSize){
         var finalFrame = frameForTopCard()
         finalFrame.origin = initialFrame.origin
         
@@ -576,11 +578,12 @@ public class KolodaView: UIView, DraggableCardDelegate {
             let cardsToAdd = min(missingCardsCount, countOfCards - currentCardNumber)
             let startIndex = visibleCards.count
             let endIndex = startIndex + cardsToAdd - 1
-            
+			
             for index in startIndex...endIndex {
                 let nextCardView = DraggableCardView(frame: frameForCardAtIndex(UInt(index)))
                 
-                if shouldTransparentize {
+				print("This is the nextCard \(nextCardView)")
+				if shouldTransparentize {
                     nextCardView.alpha = alphaValueSemiTransparent
                 }
                 nextCardView.delegate = self
@@ -589,7 +592,6 @@ public class KolodaView: UIView, DraggableCardDelegate {
                 insertSubview(nextCardView, belowSubview: visibleCards[index - 1])
             }
         }
-        
         reconfigureCards()
     }
     

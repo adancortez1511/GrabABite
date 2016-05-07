@@ -690,6 +690,7 @@
 				TargetAttributes = {
 					E6C0715C1C74305900DACD15 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 9V7P9BMUJA;
 					};
 					E6C071731C74305900DACD15 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1099,7 +1100,7 @@
 				);
 				INFOPLIST_FILE = DownToEat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs378.DownToEat;
+				PRODUCT_BUNDLE_IDENTIFIER = AC42886.DownToEat;
 				PRODUCT_NAME = DownToEat;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DownToEat/Bridging-Header.h";
@@ -1120,7 +1121,7 @@
 				);
 				INFOPLIST_FILE = DownToEat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cs378.DownToEat;
+				PRODUCT_BUNDLE_IDENTIFIER = AC42886.DownToEat;
 				PRODUCT_NAME = DownToEat;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DownToEat/Bridging-Header.h";

@@ -8,7 +8,7 @@
 
 import Foundation
 
-private let numberOfCards: UInt = 5
+private var numberOfCards: UInt = 5
 private let frameAnimationSpringBounciness:CGFloat = 9
 private let frameAnimationSpringSpeed:CGFloat = 16
 private let kolodaCountOfVisibleCards = 2
@@ -18,7 +18,7 @@ class BackgroundAnimationViewController: UIViewController {
 
     @IBOutlet weak var kolodaView: CustomKolodaView!
 	var config = Config.sharedInstance
-
+	
     //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +31,7 @@ class BackgroundAnimationViewController: UIViewController {
 		self.title = "Home"
 		self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: config.themeFont, NSForegroundColorAttributeName: UIColor.whiteColor()]
 		self.navigationController?.navigationBar.backgroundColor = config.themeColor
+
 	}
 
 	override func viewWillAppear(animated: Bool) {
@@ -106,7 +107,7 @@ extension BackgroundAnimationViewController: KolodaViewDataSource {
     }
     
     func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
-        return UIImageView(image: UIImage(named: "cards_\(index + 1)"))
+		return UIImageView(image: UIImage(named: "cards_\(index + 1)"))
     }
     
     func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {

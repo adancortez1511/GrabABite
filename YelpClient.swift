@@ -86,8 +86,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
         if offset != nil && offset > 0 {
             parameters["offset"] = offset!
         }
-        print(parameters)
-        
+		
         return self.GET("search", parameters: parameters, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             let dictionaries = response["businesses"] as? [NSDictionary]
             if dictionaries != nil {

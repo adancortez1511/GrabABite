@@ -1,3 +1,4 @@
+
 //
 //  ScheduleViewController.swift
 //  DownToEat
@@ -11,6 +12,7 @@ import UIKit
 class ScheduleTableViewController: UITableViewController
 {	
 	var config = Config.sharedInstance
+	var business : Business?
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -75,12 +77,11 @@ class ScheduleTableViewController: UITableViewController
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return config.eventsAttending
+		return Int(config.eventsAttending)
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		
-		print ("coming in here")
 		let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("scheduleCell", forIndexPath: indexPath)
 		
 		let profilePicture = config.testImg

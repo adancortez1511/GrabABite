@@ -31,16 +31,20 @@ class Config
 	private var _widthOfDevice: CGFloat = 0.0
 	private var _height: CGFloat = 0.0
 	private var _heightOfDevice: CGFloat = 0.0
-//	private var _profilePhotoImg: UIImageView!
-//	private var _userName: String = ""
-	private var _eventsAttending: Int = 0
+	private var _profilePhotoImg: UIImageView!
+	private var _userName: String = ""
+	private var _eventsAttending: UInt = 0
 	private var _navigationBarCreate: UINavigationBar!
-	private var _eventDictionary: Dictionary<Int, UIImageView>! = Dictionary()
+	private var _eventDictionary: Dictionary<UInt, UIImageView>! = Dictionary()
     private var _userLocation: CLLocation! 
     private var _userLocationLat: CLLocationDegrees!
     private var _userLocationLong: CLLocationDegrees!
-//	private var _eventDictionary: [Int: UIImageView] = [:]
 	private var _testImg: UIImageView!
+	private var _BASE_REF = Firebase(url: "https://grababite.firebaseio.com")
+	private var _USER_REF = Firebase(url: "https://grababite.firebaseio.com/userID")
+	private var _MESSAGE_REF = Firebase(url: "https://grababite.firebaseio.com/messages")
+	private var _EVENT_REF = Firebase(url: "https://grababite.firebaseio.com/events")
+	private var _SCHEDULE_REF = Firebase(url: "https://grababite.firebaseio.com/schedule")
 	
 	var width: CGFloat
 	{
@@ -66,7 +70,7 @@ class Config
 		set (newValue) {_heightOfDevice = newValue}
 	}
 	
-	var eventsAttending: Int
+	var eventsAttending: UInt
 	{
 		get {return _eventsAttending}
 		set (newValue) {_eventsAttending = newValue}
@@ -126,31 +130,25 @@ class Config
 		set (newValue) {_fontName = newValue}
 	}
 	
-//	var profilePhotoImg: UIImageView
-//	{
-//		get {return _profilePhotoImg}
-//		set (newValue) {_profilePhotoImg = newValue}
-//	}
+	var profilePhotoImg: UIImageView
+	{
+		get {return _profilePhotoImg}
+		set (newValue) {_profilePhotoImg = newValue}
+	}
 	
-//	var userName: String
-//	{
-//		get {return _userName}
-//		set (newValue) {_userName = newValue}
-//	}
+	var userName: String
+	{
+		get {return _userName}
+		set (newValue) {_userName = newValue}
+	}
 	
-//	var fireBase: Firebase
-//	{
-//		get {return _fireBase}
-//		set (newValue) {_fireBase = newValue}
-//	}
-
 	var navigationBarCreate: UINavigationBar
 	{
 		get {return _navigationBarCreate}
 		set (newValue) {_navigationBarCreate = newValue}
 	}
 
-	subscript (i: Int) -> UIImageView?
+	subscript (i: UInt) -> UIImageView?
 	{
 		get {
 			return _eventDictionary[i]
@@ -160,7 +158,7 @@ class Config
 		}
 	}
 	
-	var eventDictonary: Dictionary<Int, UIImageView>
+	var eventDictonary: Dictionary<UInt, UIImageView>
 	{
 		get {return _eventDictionary}
 		set (newValue) {_eventDictionary = newValue}
@@ -190,6 +188,78 @@ class Config
         set (newValue) {_userLocationLong = newValue}
     }
 	
+	var BASE_REF: Firebase
+	{
+		return _BASE_REF
+	}
+	
+	var USER_REF: Firebase
+	{
+		return _USER_REF
+	}
+	
+	var MESSAGE_REF: Firebase
+	{
+		return _MESSAGE_REF
+	}
+	
+	var EVENT_REF: Firebase
+	{
+		return _EVENT_REF
+	}
+	
+	var SCHEDULE_REF: Firebase
+	{
+		return _SCHEDULE_REF
+	}
+	
+	
+	var CURRENT_USER_REF: Firebase {
+		let userID = NSUserDefaults.standardUserDefaults().valueForKey("uid") as! String
+		
+		let currentUser = Firebase(url: "\(BASE_REF)").childByAppendingPath("users").childByAppendingPath(userID)
+		
+		return currentUser!
+	}
+	
+	/******* FUNCTIONS *******/
+	
+	//user log in
+	func userLogin(uid: String, user: Dictionary<String, String>) {
+		
+		// actual saving of new users happens here!!
+		// setValue saves data to Firebase
+		USER_REF.childByAppendingPath(uid).setValue(user)
+	}
+	
+	//CREATE NEW MESSAGE
+	func createNewMessage(message: Dictionary<String, AnyObject>) {
+		
+		// Save the Message
+		// MESSAGE_REF is the parent of the new messages: "messages".
+		// childByAutoId() saves the message and gives it its own ID.
+		let firebaseNewMessage = MESSAGE_REF.childByAutoId()
+		
+		// setValue saves to Firebase.
+		firebaseNewMessage.setValue(message)
+	}
+	
+	//CREATE NEW EVENT
+	func createNewEvent(event: Dictionary<String, AnyObject>) {
+		
+		//TODO:
+		//set all necessary info about event that need to be saved
+		//make sure to set condition when user creates an event. it is also being appended to the list of events user liked
+		
+		// Save the event
+		// EVENT_REF is the parent of the new events: "events".
+		// childByAutoId() saves the event and gives it its own ID.
+		let firebaseNewEvent = EVENT_REF.childByAutoId()
+		
+		// setValue saves to Firebase.
+		firebaseNewEvent.setValue(event)
+	}
+
 	func settingsButton (title: String, xPosition: Double, yPosition: Double, border: Bool) -> UIButton
 	{
 		let newButton = UIButton()
